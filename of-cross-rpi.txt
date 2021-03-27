@@ -1,0 +1,22 @@
+/home/docker/openFrameworks-stable/scripts/ci/linuxarmv6l/raspbian/
+http://ci.openframeworks.cc/rpi_toolchain_gcc6.tar.bz2
+
+15  sudo apt install -y unzip vim ccache rsync
+
+13  wget https://github.com/openframeworks/openFrameworks/archive/stable.zip
+16  unzip stable.zip 
+18  cp -rv openFrameworks-stable/scripts/ci/linuxarmv6l $OF_ROOT/scripts/ci/
+20  sudo $OF_ROOT/scripts/ci/linuxarmv6l/install.sh 
+
+30  ./build.sh 
+31  echo $ROOT
+32  sudo ./scripts/linux/ubuntu/install_dependencies.sh
+40  sudo ~/openFrameworks-stable/scripts/linux/debian/install_dependencies.sh 
+69  sudo ./download_libs.sh --platform linuxarmv6l
+38  cd ci/linuxarmv6l/
+72  sudo TARGET=linuxarmv6l ./build.sh
+
+73  file ~/hackandtell-raspberry/bin/hackandtell-raspberry 
+74  less ~/openFrameworks-stable/scripts/linux/download_libs.sh 
+75  less ~/openFrameworks-stable/scripts/dev/download_libs.sh 
+
